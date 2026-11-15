@@ -198,7 +198,7 @@ h3{margin:0;font-size:16px;font-weight:600;line-height:1.3;text-wrap:balance}
       <h1><small>Leiria Sobre Rodas · 19 a 22 nov 2026</small>Cobertura de vídeo</h1>
       <span class="status" id="status"><i></i><span>A ligar…</span></span>
     </div>
-    <p class="crew"><b>Luan</b> edição, coordenação e drone · <b>Miguel Jorge</b> câmara · <b>Joel Rodrigues</b> apresentador · 3.º elemento por definir</p>
+    <p class="crew"><b>Luan</b> edição, coordenação e drone · <b>Miguel Jorge</b> câmara · <b>Joel Rodrigues</b> apresentador · <b>Rodrigo Caetano</b> câmara</p>
     <div class="meters">
       <div class="meter"><div class="row">Atividades atribuídas<b id="m-as">0/0</b></div><div class="bar"><span id="b-as"></span></div></div>
       <div class="meter"><div class="row">Captado<b id="m-cap">0/0</b></div><div class="bar"><span id="b-cap"></span></div></div>
@@ -253,47 +253,47 @@ const DAYS=[
 {id:'sex',tab:'Sex 20',name:'Sexta 20 · abertura',alert:{t:'Antes das 15:00',m:'O recinto só abre ao público às 15:00. É a janela para planos gerais e detalhes sem gente (confirmar acesso com a organização).'},blocks:[
  B('sex-rali','08:00','14:00','Rali Vidreiro: reconhecimento do City Stage e partida','rali',{cov:CE,key:1,note:'Reconhecimento até 12:00, partida às 14:00.'}),
  B('sex-abert','15:00',null,'Abertura LSR 2026 · portas abertas','evento',{key:1,host:H('abert','Abertura com host e entrevista à organização','2026-11-20T16:00','sai 16:30')}),
- B('sex-rec','Dia',null,'Pelo recinto: Patrocinadores, Força de Segurança, VIP, Leiria Kids, alimentação','recinto',{host:H('fseg','Peça no Espaço Força de Segurança')}),
- B('sex-expo','15:00','20:00','Expo Auto e Moto · mais de 40 marcas · Automobilia','expo',{host:H('visita','Visita guiada aos stands (1.º grupo de marcas)','2026-11-20T23:00','sai sáb 11:00'),note:'A peça de sábado às 11:00 junta esta visita com a apresentação dos Supercarros.'}),
- B('sex-super','15:00','20:00','Supercarros','expo',{host:H('super','Apresentação dos Supercarros em exposição')}),
- B('sex-duc','15:00','20:00','Destaques: Ford GT · 100 anos Ducati','destaque',{host:H('ducati','Peça sobre os 100 anos da Ducati','2026-11-20T23:00','sai sáb 13:00'),note:'O reel do Ford GT é do Creative Eye (sai 21:30).'}),
+ B('sex-rec','Dia',null,'Pelo recinto: Patrocinadores, Força de Segurança, VIP, Leiria Kids, alimentação','recinto',{host:H('fseg','Stories do Espaço Força de Segurança e da Zona Patrocinadores (para o Pedro)')}),
+ B('sex-expo','15:00','20:00','Expo Auto e Moto · mais de 40 marcas · Automobilia','expo',{note:'Sem peça da equipa no plano. O Pedro faz as marcas stand a stand em stories.'}),
+ B('sex-super','15:00','20:00','Supercarros','expo',{note:'Sem peça da equipa no plano. Entra na galeria da tarde do Rui (sai 20:30).'}),
+ B('sex-duc','15:00','20:00','Destaques: Ford GT · 100 anos Ducati','destaque',{note:'Sem peça da equipa no plano. O Ford GT entra na galeria da tarde do Rui (sai 20:30).'}),
  B('sex-cod','15:30','19:15','LSR Co-Drive Experience','pista',{cov:CE,note:'Série 15:30 e 17:45 · competição 16:15 e 18:30.'}),
- B('sex-ass','17:15','20:55','Paddock Rali Vidreiro: reagrupamento e assistências','rali',{key:1,host:H('ass','Entrevistas a pilotos e equipas na assistência'),note:'Reagrupamento 17:15 · assistências 18:15 e 20:10.'}),
+ B('sex-ass','17:15','20:55','Paddock Rali Vidreiro: reagrupamento e assistências','rali',{key:1,note:'Reagrupamento 17:15 · assistências 18:15 e 20:10. Sem peça da equipa: o Pedro cobre em stories.'}),
  B('sex-k1','17:30','17:45','Exibição Kartcross','pista',{cov:CE,note:'2.ª exibição às 21:30.'}),
- B('sex-ent','20:30','21:30','Entrevistas com pilotos do Rali Vidreiro','rali',{key:1,host:H('ent','Entrevistas com os pilotos','2026-11-20T22:15','sai 22:45')}),
+ B('sex-ent','20:30','21:30','Entrevistas com pilotos do Rali Vidreiro','rali',{key:1,host:H('ent','Entrevistas com os pilotos do Rali Vidreiro','2026-11-20T23:00','sai sáb 11:00')}),
  B('sex-k2','21:30','21:45','Exibição Kartcross (2.ª)','pista',{cov:CE}),
  B('sex-drift','21:45','23:15','Drift Show','pista',{cov:CE,key:1,note:'O reel do Drift Show do Creative Eye sai às 23:55.'})
 ]},
-{id:'sab',tab:'Sáb 21',name:'Sábado 21 · dia completo',alert:{t:'Noite crítica, 21:00 a 23:45',m:'Pódio do Rali (hora a confirmar), Co-Drive, Legends, Kartcross e Drift quase em simultâneo, e as peças das 23:00 por fechar. Decide antes quem fica em cada um.',red:1},blocks:[
- B('sab-rali','08:00',null,'Rali Vidreiro: partida da 2.ª etapa e assistências','rali',{key:1,host:H('ass','Entrevistas na assistência'),note:'Partida 08:00 · assistências 08:03 e 12:45.'}),
+{id:'sab',tab:'Sáb 21',name:'Sábado 21 · dia completo',alert:{t:'Noite crítica, 21:00 a 23:45',m:'Pódio do Rali (hora a confirmar), Co-Drive, Legends, Kartcross e Drift quase em simultâneo, e a peça do Rali Vidreiro a fechar até às 23:59. Decide antes quem fica em cada um.',red:1},blocks:[
+ B('sab-rali','08:00',null,'Rali Vidreiro: partida da 2.ª etapa e assistências','rali',{key:1,note:'Partida 08:00 · assistências 08:03 e 12:45. Sem peça da equipa: o Pedro cobre em stories.'}),
  B('sab-cod1','10:00','12:15','LSR Co-Drive Experience','pista',{cov:CE,note:'Série 10:00 · competição 11:15.'}),
- B('sab-expo','10:00','22:00','Expo Auto e Moto · Automobilia · Loja oficial','expo',{host:[cap('visita','Visita guiada aos stands (2.º grupo de marcas)'),cap('vox','Vox pop com visitantes')]}),
- B('sab-dest','10:00','22:00','Destaques: 80 anos Vespa · 25 anos ACP Clássicos · Quads','destaque',{host:H('acp','Peça sobre os 25 anos do ACP Clássicos','2026-11-21T23:00','sai dom 10:30'),note:'O Creative Eye faz as imagens dos Quads (reel sai dom 12:30).'}),
+ B('sab-expo','10:00','22:00','Expo Auto e Moto · Automobilia · Loja oficial','expo',{note:'Sem peça da equipa no plano. O reel 2 da Cristiana (Expo, Automobilia e loja) sai às 17:30.'}),
+ B('sab-dest','10:00','22:00','Destaques: 80 anos Vespa · 25 anos ACP Clássicos · Quads','destaque',{host:H('acp','Story dos 25 anos do ACP Clássicos (para o Pedro)')}),
  B('sab-desf','11:00','12:45','Desfiles: Mustang (11:00) e Hyundai N Thusiastics (12:30)','pista',{cov:CE}),
  B('sab-k1','12:15','12:30','Exibição Kartcross','pista',{cov:CE,note:'2.ª exibição às 22:30.'}),
  B('sab-rec','13:00','14:00','Reconhecimentos do Gold Challenge','pista',{note:'Sem vídeo dedicado no plano de conteúdos. B-roll para o resumo.'}),
- B('sab-leg','14:15','15:45','Exibição Legend e treinos do Gold Challenge','pista',{cov:CE,host:H('leg','Entrevista a um piloto das Legends','2026-11-21T16:00','sai 16:30'),note:'Treinos Rally 4/5 e Rally 2.'}),
- B('sab-pad','Tarde',null,'Paddock Rali Vidreiro, antes do City Stage','rali',{key:1,host:H('pad','Entrevistas a pilotos e equipas no paddock','2026-11-21T23:00','sai dom 11:30'),note:'A peça de domingo às 11:30 junta paddock e pódio do Rali.'}),
- B('sab-city','17:05',null,'City Stage do Rali Vidreiro','rali',{cov:CE,key:1,host:H('city','Reações dos pilotos à saída da especial'),note:'O reel do Creative Eye sai até às 19:00. A luz natural acaba por volta das 17:20.'}),
- B('sab-clas','17:15',null,'Clássicos e Clubes em pista','pista',{cov:CE,tbc:1,note:'Hora a confirmar. Não consta do programa de pista V3.'}),
+ B('sab-leg','14:15','15:45','Exibição Legend e treinos do Gold Challenge','pista',{cov:CE,note:'Treinos Rally 4/5 e Rally 2. Sem peça da equipa no plano.'}),
+ B('sab-pad','Tarde',null,'Paddock Rali Vidreiro, antes do City Stage','rali',{key:1,host:cap('pad','Paddock para a peça do Rali Vidreiro'),note:'Entra na peça de domingo às 11:30 (paddock, City Stage e pódio).'}),
+ B('sab-city','17:05',null,'City Stage do Rali Vidreiro','rali',{cov:CE,key:1,host:cap('city','City Stage para a peça do Rali Vidreiro'),note:'Entra na peça de domingo às 11:30. O reel do Creative Eye sai às 19:00. A luz natural acaba por volta das 17:20.'}),
+ B('sab-clas','17:15',null,'Clássicos e Clubes em pista','pista',{cov:CE,tbc:1,note:'Hora a confirmar. Fora do programa de pista e do programa público.'}),
  B('sab-cod2','19:00','22:30','LSR Co-Drive Experience, noite','pista',{cov:CE,note:'Série 19:00 · competição 21:00 · série 22:00.'}),
- B('sab-pod','21:00','23:00','Pódio do Rali Vidreiro','rali',{key:1,tbc:1,host:H('pod','Entrevista aos vencedores no pódio'),note:'Hora a confirmar. Entra na peça de domingo às 11:30, a fechar até 23:00.'}),
+ B('sab-pod','21:00','23:00','Pódio do Rali Vidreiro','rali',{key:1,tbc:1,host:H('pod','Peça do Rali Vidreiro: paddock, City Stage e pódio','2026-11-21T23:59','sai dom 11:30'),note:'Hora do pódio a confirmar. A galeria do Rui sai às 23:30.'}),
  B('sab-l2','22:00','22:30','Exibição Legend','pista',{note:'Sem vídeo dedicado no plano (só fotografia).'}),
  B('sab-k2','22:30','22:45','Exibição Kartcross (2.ª)','pista',{cov:CE}),
- B('sab-drift','22:45','23:45','LSR Co-Drive Experience · Drift','pista',{cov:CE,key:1,note:'O reel do Creative Eye sai dom 10:00 (entrega às 23:59).'})
+ B('sab-drift','22:45','23:45','LSR Co-Drive Experience · Drift','pista',{cov:CE,key:1})
 ]},
-{id:'dom',tab:'Dom 22',name:'Domingo 22 · fecho',alert:{t:'A partir das 16:00, toda a equipa na pista',m:'Tudo o resto tem de estar filmado antes. Miguel, 3.º elemento e Luan ficam juntos no final do Gold Challenge, no pódio e no encerramento.',red:1},blocks:[
- B('dom-pas','10:00',null,'Passeio de bicicletas antigas','evento',{host:H('pas','Entrevista a participantes do passeio')}),
- B('dom-rec','Dia',null,'Pelo recinto: Leiria Kids, Força de Segurança, VIP, Patrocinadores','recinto',{host:H('pat','Zona Patrocinadores')}),
+{id:'dom',tab:'Dom 22',name:'Domingo 22 · fecho',alert:{t:'A partir das 16:00, toda a equipa na pista',m:'Tudo o resto tem de estar filmado antes. Miguel, Rodrigo e Luan ficam juntos no final do Gold Challenge, no pódio e no encerramento.',red:1},blocks:[
+ B('dom-pas','10:00',null,'Passeio de bicicletas antigas','evento',{note:'Sem peça da equipa: o reel 3 da Cristiana (sai 13:30) é sobre o passeio.'}),
+ B('dom-rec','Dia',null,'Pelo recinto: Leiria Kids, Força de Segurança, VIP, Patrocinadores','recinto',{note:'Sem peça da equipa no plano.'}),
  B('dom-cod','10:00','11:30','LSR Co-Drive Experience','pista',{cov:CE,note:'Série 10:00 · competição 10:45.'}),
- B('dom-expo','10:00','18:00','Expo Auto e Moto · Supercarros','expo',{host:H('visita','Visita guiada aos restantes stands de marcas')}),
- B('dom-dest','10:00','18:00','Destaques: Motorizadas Antigas e resumo dos destaques','destaque',{host:H('vespa','Peça sobre os 80 anos da Vespa e as Motorizadas Antigas','2026-11-22T16:00','sai 16:30')}),
+ B('dom-expo','10:00','18:00','Expo Auto e Moto · Supercarros','expo',{note:'Sem peça da equipa no plano.'}),
+ B('dom-dest','10:00','18:00','Destaques: Motorizadas Antigas e resumo dos destaques','destaque',{note:'Sem peça da equipa no plano. A Cristiana faz as Motorizadas Antigas em stories.'}),
  B('dom-g1','11:30','13:00','Gold Challenge, série 1','pista',{cov:CE,note:'Exibição Legend · Rally 4/5/6 · Rally 2.'}),
- B('dom-alm','13:00','14:00','Almoço na zona de alimentação · Co-Drive','recinto',{host:H('vox','Vox pop com visitantes'),note:'Co-Drive, série 13:00 a 13:30.'}),
+ B('dom-alm','13:00','14:00','Almoço na zona de alimentação · Co-Drive','recinto',{note:'Co-Drive, série 13:00 a 13:30. Sem peça da equipa no plano.'}),
  B('dom-g2','14:00','15:30','Gold Challenge, série 2','pista',{cov:CE}),
- B('dom-k','15:45','16:00','Exibição Kartcross','pista',{cov:CE,note:'O reel do Kartcross do fim de semana sai às 17:00.'}),
+ B('dom-k','15:45','16:00','Exibição Kartcross','pista',{cov:CE}),
  B('dom-g3','16:00','17:30','Gold Challenge, série 3','pista',{cov:CE,key:1,note:'Toda a equipa na pista. Combinem os ângulos entre os três para não repetir planos. O reel do Creative Eye sai às 18:30.'}),
- B('dom-pod','18:00',null,'Pódio do Gold Challenge e fecho','pista',{key:1,tbc:1,host:H('venc','Entrevista aos vencedores'),note:'Hora a confirmar. Toda a equipa: pódio, entrevistas aos vencedores e encerramento.'})
+ B('dom-pod','18:00',null,'Pódio do Gold Challenge e fecho','pista',{key:1,tbc:1,note:'Hora a confirmar. Toda a equipa: pódio e encerramento. A galeria do Rui sai às 20:00.'})
 ]},
 ];
 
@@ -303,16 +303,16 @@ const EXPO=[
  {id:'ducati',n:'100 anos Ducati',d:'Sex, Dom',w:'Sem público: sexta antes das 15:00.'},
  {id:'vespa',n:'80 anos Vespa',d:'Sáb, Dom',w:'Sábado às 10:00, assim que abre.'},
  {id:'acp',n:'25 anos ACP Clássicos',d:'Sáb, Dom',w:'Sábado às 10:00, assim que abre.'},
- {id:'quads',n:'Quads',d:'Sáb, Dom',w:'Sábado às 10:00. O Creative Eye faz as imagens para reel.'},
+ {id:'quads',n:'Quads',d:'Sáb, Dom',w:'Sábado às 10:00.'},
  {id:'moto',n:'Motorizadas Antigas',d:'Dom',w:'Domingo às 10:00, antes de encher.'},
  {id:'hist',n:'Veículos históricos',d:'Sex, Sáb, Dom',w:'Sem público: sexta antes das 15:00.'},
- {id:'marcas',n:'Expo Auto e Moto (+40 marcas)',d:'Sex, Sáb, Dom',w:'Stands vazios: sexta antes das 15:00. Visitas guiadas: sex, sáb e dom.'},
+ {id:'marcas',n:'Expo Auto e Moto (+40 marcas)',d:'Sex, Sáb, Dom',w:'Stands vazios: sexta antes das 15:00. Até domingo, passar por todas as marcas.'},
  {id:'auto',n:'Automobilia',d:'Sex, Sáb, Dom',w:'Bancas montadas: sexta antes das 15:00.'},
  {id:'loja',n:'Loja oficial',d:'Sáb',w:'Sábado, durante o dia.'},
  {id:'kids',n:'Leiria Kids',d:'Sex, Sáb, Dom',w:'Com crianças, sábado de manhã.'},
- {id:'fseg',n:'Espaço Força de Segurança',d:'Sex, Sáb, Dom',w:'Peça da equipa na sexta.'},
- {id:'patr',n:'Zona Patrocinadores e Zona VIP',d:'Sex, Sáb, Dom',w:'Sem público: sexta antes das 15:00. Peça de domingo.'},
- {id:'comida',n:'Zona de alimentação',d:'Sex, Sáb, Dom',w:'Domingo ao almoço, com a peça de vox pop.'}
+ {id:'fseg',n:'Espaço Força de Segurança',d:'Sex, Sáb, Dom',w:'Stories do Joel na sexta.'},
+ {id:'patr',n:'Zona Patrocinadores e Zona VIP',d:'Sex, Sáb, Dom',w:'Sem público: sexta antes das 15:00. Stories do Joel na sexta.'},
+ {id:'comida',n:'Zona de alimentação',d:'Sex, Sáb, Dom',w:'Domingo ao almoço.'}
 ];
 
 /* janelas de captação (para detetar sobreposições por pessoa) */
@@ -333,14 +333,12 @@ const SHOTS=[['ger','Plano geral'],['det','Detalhes'],['amb','Ambiente com visit
 const DUVIDAS=[
  ['pod-rali','Hora do pódio do Rali Vidreiro (sáb 21:00, a confirmar)'],
  ['pod-gc','Hora do pódio do Gold Challenge e fecho (dom 18:00, a confirmar)'],
- ['clas','Hora dos Clássicos e Clubes em pista (sáb 17:15, fora do programa de pista V3)'],
+ ['clas','Hora dos Clássicos e Clubes em pista (sáb 17:15, a confirmar no plano v2)'],
  ['acesso','Acesso ao recinto antes das 15:00 de sexta para planos sem público'],
- ['terceiro','Terceiro elemento da equipa: operador de câmara ou editor'],
- ['entregas','Propor ao Pedro Batalha entrega às 09:00 do próprio dia nas peças que saem de manhã (sáb 11:00 e 13:00, dom 10:30 e 11:30)'],
  ['clubes-ordem','Ordem e horas de passagem em pista de cada clube e exposição (passam uma só vez)'],
  ['locais','Localização no mapa de Ford GT, 100 anos Ducati, 80 anos Vespa, Quads, Motorizadas Antigas, Veículos históricos e Loja oficial'],
  ['citystage','City Stage do Rali (sáb 17:05): confirmar se corre na Pista LSR e se coincide com os Clássicos'],
- ['prazos','Prazos apertados: Abertura (sex 16:00) e Legends (sáb 16:00) dão só 15 min de edição depois da captação. Propor 16:30 ao Pedro Batalha'],
+ ['prazos','Prazo apertado: a Abertura (entrega sex 16:00) dá só 15 min de edição depois da captação. Propor 16:15 ao Pedro Batalha'],
  ['material','Partilha de material e cartões com Creative Eye, Rui Pedrosa e a equipa de redes, com cópia dupla no próprio dia']
 ];
 
@@ -396,7 +394,7 @@ const fmtH=m=>Math.floor(m/60)+' h'+(m%60?' '+String(m%60).padStart(2,'0'):'');
 const cfTxt=c=>unitName(c[0].u)+' e '+unitName(c[1].u)+' ('+DLB[c[1].m]+' '+c[1].a+')';
 
 /* ---------- render ---------- */
-const CREW=[['luan','Luan'],['miguel','Miguel Jorge'],['joel','Joel Rodrigues'],['terceiro','3.º elemento']];
+const CREW=[['luan','Luan'],['miguel','Miguel Jorge'],['joel','Joel Rodrigues'],['terceiro','Rodrigo Caetano']];
 const CN=Object.fromEntries(CREW);
 const ALLB=DAYS.flatMap(d=>d.blocks);
 function selHTML(attr,val,ph){
@@ -445,7 +443,7 @@ function guiaHTML(){
   const dn=its.filter(i=>checks.has(i.key)).length, nu=cnt(who);
   html+=who==='none'
     ?`<p class="banner"><b>Por atribuir.</b> ${nu} atividades sem responsável. Atribui-as nos separadores dos dias e das exposições.</p>`
-    :`<p class="banner"><b>Guia de ${CN[who]}.</b> ${nu} atividades, ${its.length} tarefas, ${dn} feitas, ${fmtH(loadMin(who))} de captação marcada. Para enviar só este guia, partilha a página e acrescenta #guia-${who} ao endereço.</p>`+(conflictsOf(who).length?`<p class="banner red"><b>Sobreposições.</b> ${conflictsOf(who).map(cfTxt).join('; ')}.</p>`:'<p class="note">Sem sobreposições de horário nas atividades atribuídas.</p>');
+    :`<p class="banner"><b>Guia de ${CN[who]}.</b> ${nu} atividades, ${its.length} tarefas, ${dn} feitas, ${fmtH(loadMin(who))} de captação marcada. Para enviar só este guia, partilha a página e acrescenta #guia-${who==='terceiro'?'rodrigo':who} ao endereço.</p>`+(conflictsOf(who).length?`<p class="banner red"><b>Sobreposições.</b> ${conflictsOf(who).map(cfTxt).join('; ')}.</p>`:'<p class="note">Sem sobreposições de horário nas atividades atribuídas.</p>');
   let any=false;
   DAYS.forEach(d=>{
     const bl=d.blocks.filter(b=>matchP(b.id));
@@ -755,9 +753,9 @@ document.addEventListener('change',e=>{
 $('#tabs').addEventListener('click',e=>{const b=e.target.closest('[data-t]');if(b)go(b.dataset.t)});
 $('#filters').addEventListener('click',e=>{const b=e.target.closest('[data-f]');if(b){filter=b.dataset.f;safe(()=>localStorage.setItem(LSV,filter));render()}});
 $('#main').addEventListener('click',e=>{const q=e.target.closest('[data-eh]');if(q){edHide=q.dataset.eh==='1';render();return}const b=e.target.closest('[data-g]');if(b){who=b.dataset.g;safe(()=>localStorage.setItem(LSW,who));go('guia')}});
-function go(id){tab=id;const h=id==='guia'?'guia-'+who:id;if(location.hash!=='#'+h)location.hash=h;render();const a=$('#tabsAnchor').getBoundingClientRect().top+window.scrollY;if(window.scrollY>a)window.scrollTo({top:a})}
+function go(id){tab=id;const h=id==='guia'?'guia-'+(who==='terceiro'?'rodrigo':who):id;if(location.hash!=='#'+h)location.hash=h;render();const a=$('#tabsAnchor').getBoundingClientRect().top+window.scrollY;if(window.scrollY>a)window.scrollTo({top:a})}
 function applyHash(h){
-  if(h==='guia'||h.startsWith('guia-')){const w=h.slice(5);tab='guia';if(CN[w]||w==='none')who=w;return true}
+  if(h==='guia'||h.startsWith('guia-')){const w=h.slice(5)==='rodrigo'?'terceiro':h.slice(5);tab='guia';if(CN[w]||w==='none')who=w;return true}
   if(h==='mapa'||h.startsWith('mapa-')){tab='mapa';const z=h.slice(5);mapSel=ZN[z]?z:null;return true}
   if([...DAYS.map(d=>d.id),'expo','duv','edi'].includes(h)){tab=h;return true}
   return false;
