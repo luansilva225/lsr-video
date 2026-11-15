@@ -187,6 +187,10 @@ h3{margin:0;font-size:16px;font-weight:600;line-height:1.3;text-wrap:balance}
 .win b{font-family:var(--sans);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-right:6px}
 .mut{color:var(--muted);font-size:13px}
 .tag.joel{background:var(--blue-soft);color:var(--blue);border-color:var(--blue)}
+.demo{margin-top:12px;background:transparent;color:#8fc7f2;border:1px solid #8fc7f2;border-radius:999px;padding:4px 12px;font:600 12.5px var(--sans);cursor:pointer}
+.demotag{display:none!important}
+.live.demo-on{outline:2px dashed #8fc7f2;outline-offset:3px}
+.live.demo-on .demotag{display:inline-block!important;margin-top:8px;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#021119;background:#8fc7f2;border-radius:4px;padding:2px 6px}
 </style>
 </head>
 <body>
@@ -211,7 +215,7 @@ h3{margin:0;font-size:16px;font-weight:600;line-height:1.3;text-wrap:balance}
 
 <div class="in">
   <section class="live" aria-label="Pista agora">
-    <div class="clock"><h2>Hora em Leiria</h2><b id="clk">--:--:--</b><span id="cdate"></span></div>
+    <div class="clock"><h2>Hora em Leiria</h2><b id="clk">--:--:--</b><span id="cdate"></span><span class="demotag">Exemplo · hora simulada</span><button type="button" id="demo" class="demo" hidden>Ver exemplo (sábado 11:05)</button></div>
     <div><h2>Na pista agora</h2><div id="onnow"></div></div>
     <div><h2>A seguir</h2><div id="upnext"></div></div>
   </section>
@@ -624,7 +628,9 @@ const UNICAS=[
  {id:'clubes',t:'Clássicos e Clubes em pista',d:d2,s:'17:15',e:null,tbc:true,blk:'sab-clas',note:'Hora a confirmar. Coincide com o City Stage (17:05): decide antes quem fica em cada um.'}
 ];
 const msS=s=>Date.parse(s+'Z');
-const nowS=()=>new Date().toLocaleString('sv-SE',{timeZone:'Europe/Lisbon'}).replace(' ','T');
+let demoOff=0;
+const nowD=()=>new Date(Date.now()+demoOff);
+const nowS=()=>nowD().toLocaleString('sv-SE',{timeZone:'Europe/Lisbon'}).replace(' ','T');
 const fmtD=x=>{const m=Math.max(0,Math.round(x/6e4)),h=Math.floor(m/60),d=Math.floor(h/24);return d>=1?d+' d '+(h%24)+' h':h>=1?h+' h '+(m%60)+' min':m+' min'};
 const dl=iso=>DOW[new Date(iso+'T00:00:00Z').getUTCDay()]+' '+iso.slice(8,10);
 let liveSig='';
@@ -660,7 +666,10 @@ function onceHTML(){
 }
 function tick(){
   if($('#once').hidden===(nowS().slice(0,10)==='2026-11-21'))renderOnce();
-  const now=new Date();
+  const now=nowD();
+  const db=$('#demo'), live=Date.now()>=Date.parse('2026-11-20T08:00:00Z');
+  if(db){db.hidden=live&&!demoOff;db.textContent=demoOff?'Sair do exemplo':'Ver exemplo (sábado 11:05)'}
+  $('.live').classList.toggle('demo-on',!!demoOff);
   $('#clk').textContent=now.toLocaleTimeString('pt-PT',{timeZone:'Europe/Lisbon',hourCycle:'h23'});
   $('#cdate').textContent=now.toLocaleDateString('pt-PT',{timeZone:'Europe/Lisbon',weekday:'long',day:'numeric',month:'long'});
   liveRender();
@@ -669,6 +678,7 @@ function tick(){
 document.addEventListener('click',e=>{
   const lk=e.target.closest('.maplink'); if(lk){openMap(lk.dataset.z);return}
   if(e.target.closest('#minimap')){openMap(null);return}
+  if(e.target.closest('#demo')){demoOff=demoOff?0:Date.parse('2026-11-21T11:05:00Z')-Date.now();liveSig='';tick();renderOnce();return}
   if(e.target.closest('#ovx')||e.target.id==='mapov'){closeMap();return}
   const zn=e.target.closest('.mapbox [data-z]'); if(zn)selZone(zn.dataset.z);
 });
