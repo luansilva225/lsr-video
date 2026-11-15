@@ -470,7 +470,7 @@ function render(){
     m.innerHTML=guiaHTML();
   }else{
     const d=DAYS.find(x=>x.id===tab), bl=d.blocks.filter(keep);
-    m.innerHTML=(d.alert&&filter==='all'?`<p class="banner${d.alert.red?' red':''}"><b>${esc(d.alert.t)}.</b> ${esc(d.alert.m)}</p>`:'')+(bl.length?bl.map(b=>blockHTML(b)).join(''):'<p class="empty">Nada a mostrar com este filtro.</p>');
+    m.innerHTML=(tab==='sab'&&filter==='all'?'<section class="once" id="once-sab">'+onceHTML()+'</section>':'')+(d.alert&&filter==='all'?`<p class="banner${d.alert.red?' red':''}"><b>${esc(d.alert.t)}.</b> ${esc(d.alert.m)}</p>`:'')+(bl.length?bl.map(b=>blockHTML(b)).join(''):'<p class="empty">Nada a mostrar com este filtro.</p>');
   }
   renderTabs();
 }
@@ -648,12 +648,18 @@ function stat(u){
   return n<s?'Faltam '+fmtD(s-n):n<e?'A decorrer agora':'Já passou';
 }
 function renderOnce(){
-  $('#once').innerHTML=`<h2>Só passam uma vez</h2><p class="note">Clubes e exposições em pista, sem repetição. Não há segunda oportunidade.</p><div class="ong">${UNICAS.map(u=>{
+  const sat=nowS().slice(0,10)==='2026-11-21', o=$('#once'), h=onceHTML();
+  o.hidden=!sat; if(sat)o.innerHTML=h;
+  const t=$('#once-sab'); if(t)t.innerHTML=h;
+}
+function onceHTML(){
+  return `<h2>Só passam uma vez</h2><p class="note">Clubes e exposições em pista, sem repetição. Não há segunda oportunidade.</p><div class="ong">${UNICAS.map(u=>{
     const k='un.'+u.id, w=assign.get(u.blk), st=stat(u);
     return `<div class="uc${u.tbc?' tbc':''}"><span class="dd">${dl(u.d)}</span><span class="tt">${u.s}${u.e?' a '+u.e:''}</span><b>${esc(u.t)}</b>${u.tbc?'<span class="tag tbc">Hora a confirmar</span>':''}<span class="st${st==='A decorrer agora'?' now':''}" data-u="${u.id}">${st}</span><span class="rs">Responsável: ${w?'<b>'+esc(CN[w])+'</b>':'por atribuir'}</span>${u.note?`<span class="note">${esc(u.note)}</span>`:''}<div class="it uk${checks.has(k)?' on':''}" data-it="${k}"><label><input type="checkbox" data-k="${k}"${checks.has(k)?' checked':''}><span class="t">Captado</span></label></div>${zlinks(['pista'])}</div>`;
   }).join('')}</div>`;
 }
 function tick(){
+  if($('#once').hidden===(nowS().slice(0,10)==='2026-11-21'))renderOnce();
   const now=new Date();
   $('#clk').textContent=now.toLocaleTimeString('pt-PT',{timeZone:'Europe/Lisbon',hourCycle:'h23'});
   $('#cdate').textContent=now.toLocaleDateString('pt-PT',{timeZone:'Europe/Lisbon',weekday:'long',day:'numeric',month:'long'});
