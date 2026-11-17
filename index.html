@@ -218,7 +218,6 @@ h3{margin:0;font-size:16px;font-weight:600;line-height:1.3;text-wrap:balance}
       <div class="meter"><div class="row">Atividades atribuídas<b id="m-as">0/0</b></div><div class="bar"><span id="b-as"></span></div></div>
       <div class="meter"><div class="row">Captado<b id="m-cap">0/0</b></div><div class="bar"><span id="b-cap"></span></div></div>
       <div class="meter"><div class="row">Editado e entregue<b id="m-ed">0/0</b></div><div class="bar ed"><span id="b-ed"></span></div></div>
-      <div class="meter"><div class="row">Por confirmar<b id="m-dv">0/0</b></div><div class="bar"><span id="b-dv"></span></div></div>
     </div>
     <div class="cd" id="cd"></div>
   </div>
@@ -276,7 +275,7 @@ const DAYS=[
  B('sex-k2','21:30','21:45','Exibição Kartcross (2.ª)','pista',{cov:CE}),
  B('sex-drift','21:45','23:15','Drift Show','pista',{cov:CE,key:1,note:'O reel do Drift Show do Creative Eye sai às 23:55.'})
 ]},
-{id:'sab',tab:'Sáb 21',name:'Sábado 21 · dia completo',alert:{t:'Noite crítica, 21:00 a 23:45',m:'Pódio do Rali (hora a confirmar), Co-Drive, Legends, Kartcross e Drift quase em simultâneo, e a peça do Rali Vidreiro a fechar até às 23:59. Decide antes quem fica em cada um.',red:1},blocks:[
+{id:'sab',tab:'Sáb 21',name:'Sábado 21 · dia completo',alert:{t:'Noite crítica, 21:00 a 23:45',m:'Pódio do Rali às 21:00, Co-Drive, Legends, Kartcross e Drift quase em simultâneo, e a peça do Rali Vidreiro a fechar até às 23:59. Decide antes quem fica em cada um.',red:1},blocks:[
  B('sab-rali','08:00',null,'Rali Vidreiro: partida da 2.ª etapa e assistências','rali',{key:1,note:'Partida 08:00 · assistências 08:03 e 12:45. Sem peça da equipa: o Pedro cobre em stories.'}),
  B('sab-cod1','10:00','12:15','LSR Co-Drive Experience','pista',{cov:CE,note:'Série 10:00 · competição 11:15.'}),
  B('sab-expo','10:00','22:00','Expo Auto e Moto · Automobilia · Loja oficial','expo',{note:'Sem peça da equipa no plano. O reel 2 da Cristiana (Expo, Automobilia e loja) sai às 17:30.'}),
@@ -287,9 +286,8 @@ const DAYS=[
  B('sab-leg','14:15','15:45','Exibição Legend e treinos do Gold Challenge','pista',{cov:CE,note:'Treinos Rally 4/5 e Rally 2. Sem peça da equipa no plano.'}),
  B('sab-pad','Tarde',null,'Paddock Rali Vidreiro, antes do City Stage','rali',{key:1,host:cap('pad','Paddock para a peça do Rali Vidreiro'),note:'Entra na peça de domingo às 11:30 (paddock, City Stage e pódio).'}),
  B('sab-city','17:05',null,'City Stage do Rali Vidreiro','rali',{cov:CE,key:1,host:cap('city','City Stage para a peça do Rali Vidreiro'),note:'Entra na peça de domingo às 11:30. O reel do Creative Eye sai às 19:00. A luz natural acaba por volta das 17:20.'}),
- B('sab-clas','17:15',null,'Clássicos e Clubes em pista','pista',{cov:CE,tbc:1,note:'Hora a confirmar. Fora do programa de pista e do programa público.'}),
  B('sab-cod2','19:00','22:30','LSR Co-Drive Experience, noite','pista',{cov:CE,note:'Série 19:00 · competição 21:00 · série 22:00.'}),
- B('sab-pod','21:00','23:00','Pódio do Rali Vidreiro','rali',{key:1,tbc:1,host:H('pod','Peça do Rali Vidreiro: paddock, City Stage e pódio','2026-11-21T23:59','sai dom 11:30'),note:'Hora do pódio a confirmar. A galeria do Rui sai às 23:30.'}),
+ B('sab-pod','21:00','23:00','Pódio do Rali Vidreiro','rali',{key:1,host:H('pod','Peça do Rali Vidreiro: paddock, City Stage e pódio','2026-11-21T23:59','sai dom 11:30'),note:'Pódio às 21:00. A galeria do Rui sai às 23:30.'}),
  B('sab-l2','21:30','22:00','Exibição Legend','pista',{note:'Sem vídeo dedicado no plano (só fotografia).'}),
  B('sab-k2','22:30','22:45','Exibição Kartcross (2.ª)','pista',{cov:CE}),
  B('sab-drift','22:45','23:45','LSR Co-Drive Experience · Drift','pista',{cov:CE,key:1})
@@ -305,7 +303,7 @@ const DAYS=[
  B('dom-g2','14:00','15:30','Gold Challenge, série 2','pista',{cov:CE,note:'Rally 4/5 e Rally 2. Sem Legend nesta série.'}),
  B('dom-k','15:30','15:45','Exibição Kartcross','pista',{cov:CE}),
  B('dom-g3','15:45','17:30','Gold Challenge, série 3','pista',{cov:CE,key:1,note:'Toda a equipa na pista. Combinem os ângulos entre os três para não repetir planos. O reel do Creative Eye sai às 18:30.'}),
- B('dom-pod','18:00',null,'Pódio do Gold Challenge e fecho','pista',{key:1,tbc:1,note:'Hora a confirmar. Toda a equipa: pódio e encerramento. A galeria do Rui sai às 20:00.'})
+ B('dom-pod','18:00',null,'Pódio do Gold Challenge e fecho','pista',{key:1,note:'A partir das 18:00. Toda a equipa: pódio e encerramento. A galeria do Rui sai às 20:00.'})
 ]},
 ];
 
@@ -333,8 +331,8 @@ const UW={
 'sex-rec':['sex 14:15-14:55'],'sex-rali':['sex 14:00-14:30'],'sex-abert':['sex 15:00-15:45'],'sex-expo':['sex 15:45-16:30'],'sex-super':['sex 16:30-17:15'],'sex-duc':['sex 17:15-18:00'],
 'sex-k1':['sex 17:30-17:45'],'sex-ass':['sex 18:15-18:45','sex 20:10-20:30'],'sex-cod':['sex 18:30-19:15'],'sex-ent':['sex 20:30-21:30'],'sex-k2':['sex 21:30-21:45'],'sex-drift':['sex 21:45-23:15'],
 'sab-rali':['sab 08:00-08:30','sab 12:45-13:15'],'sab-expo':['sab 10:30-11:15','sab 13:20-14:00'],'sab-desf':['sab 11:00-11:15','sab 12:30-12:45'],'sab-cod1':['sab 11:15-12:15'],'sab-k1':['sab 12:15-12:30'],'sab-rec':['sab 13:00-13:30'],
-'sab-dest':['sab 14:15-15:00'],'sab-leg':['sab 14:15-15:45'],'sab-pad':['sab 15:45-16:45'],'sab-city':['sab 17:00-17:30'],'sab-clas':['sab 17:15-17:45'],'sab-cod2':['sab 19:00-19:45','sab 21:00-21:30'],'sab-pod':['sab 21:00-21:45'],'sab-l2':['sab 21:30-22:00'],'sab-k2':['sab 22:30-22:45'],'sab-drift':['sab 22:45-23:45'],
-'dom-pas':['dom 10:00-10:30'],'dom-cod':['dom 10:30-11:00'],'dom-dest':['dom 11:00-11:45'],'dom-g1':['dom 12:00-12:45'],'dom-expo':['dom 12:15-13:00'],'dom-alm':['dom 13:00-13:45'],'dom-rec':['dom 14:00-14:45'],'dom-g2':['dom 15:00-15:30'],'dom-k':['dom 15:30-15:45'],'dom-g3':['dom 15:45-17:30'],'dom-pod':['dom 17:30-19:00'],
+'sab-dest':['sab 14:15-15:00'],'sab-leg':['sab 14:15-15:45'],'sab-pad':['sab 15:45-16:45'],'sab-city':['sab 17:00-17:30'],'sab-cod2':['sab 19:00-19:45','sab 21:00-21:30'],'sab-pod':['sab 21:00-21:45'],'sab-l2':['sab 21:30-22:00'],'sab-k2':['sab 22:30-22:45'],'sab-drift':['sab 22:45-23:45'],
+'dom-pas':['dom 10:00-10:30'],'dom-cod':['dom 10:30-11:00'],'dom-dest':['dom 11:00-11:45'],'dom-g1':['dom 12:00-12:45'],'dom-expo':['dom 12:15-13:00'],'dom-alm':['dom 13:00-13:45'],'dom-rec':['dom 14:00-14:45'],'dom-g2':['dom 15:00-15:30'],'dom-k':['dom 15:30-15:45'],'dom-g3':['dom 15:45-17:30'],'dom-pod':['dom 18:00-19:00'],
 'ex.super':['sex 11:00-11:30'],'ex.ford':['sex 11:30-11:50'],'ex.ducati':['sex 11:50-12:15'],'ex.hist':['sex 12:15-12:45'],'ex.marcas':['sex 11:00-12:30'],'ex.auto':['sex 12:30-13:15'],'ex.patr':['sex 13:15-13:45'],
 'ex.kids':['sab 10:00-10:30'],'ex.vespa':['sab 10:00-10:20'],'ex.acp':['sab 10:20-10:40'],'ex.quads':['sab 10:40-11:00'],'ex.loja':['sab 15:00-15:30'],'ex.moto':['dom 10:00-10:30']};
 const CAPEND={'sab-leg.leg-ed':'sab 15:45'};
@@ -492,7 +490,7 @@ function renderTabs(){
   const nEd=all.filter(i=>i.kind==='ed'&&!checks.has(i.key)).length;
   const nCf=['miguel','terceiro','luan','joel'].reduce((t,p)=>t+conflictsOf(p).length,0);
   const unas=UNITS().filter(u=>!assign.get(u)).length;
-  const t=DAYS.map(d=>[d.id,d.tab,rem(d.id)+' por fazer']);t.splice(0,0,['edi','Edição',nEd+' por editar']);t.push(...[['expo','Exposições',rem('expo')+' por fazer'],['mapa','Mapa',ZONES.length+' zonas'],['guia','Guias',unas+' por atribuir'+(nCf?' · '+nCf+' sobrep.':'')],['duv','Por confirmar',DUVIDAS.filter(x=>!checks.has('dv.'+x[0])).length+' por fazer']]);
+  const t=DAYS.map(d=>[d.id,d.tab,rem(d.id)+' por fazer']);t.splice(0,0,['edi','Edição',nEd+' por editar']);t.push(...[['expo','Exposições',rem('expo')+' por fazer'],['mapa','Mapa',ZONES.length+' zonas'],['guia','Guias',unas+' por atribuir'+(nCf?' · '+nCf+' sobrep.':'')]]);
   $('#tabs').innerHTML=t.map(([id,l,s])=>`<button role="tab" data-t="${id}" aria-selected="${id===tab}">${l}<small>${s}</small></button>`).join('');
 }
 function refresh(){
@@ -516,7 +514,7 @@ function renderMeters(){
   $('#m-as').textContent=c4+'/'+UNITS().length; $('#b-as').style.width=(c4/UNITS().length*100)+'%';
   $('#m-cap').textContent=c1+'/'+cp.length; $('#b-cap').style.width=(c1/cp.length*100)+'%';
   $('#m-ed').textContent=c2+'/'+e.length; $('#b-ed').style.width=(c2/e.length*100)+'%';
-  $('#m-dv').textContent=c3+'/'+DUVIDAS.length; $('#b-dv').style.width=(c3/DUVIDAS.length*100)+'%';
+
 }
 function renderNext(){
   const n=allItems().filter(i=>i.due&&!checks.has(i.key)).sort((a,b)=>ms(a.due)-ms(b.due)).slice(0,4);
@@ -546,12 +544,12 @@ const ZN=Object.fromEntries(ZONES.map(z=>[z.id,z]));
 const ZMAP={
  'sex-rec':['forcas','kids','vip','gastro'],'dom-rec':['forcas','kids','vip','gastro'],
  'sex-expo':['expoauto','expomoto','automobilia'],'sab-expo':['expoauto','expomoto','automobilia'],'dom-expo':['expoauto','expomoto','supercarros'],
- 'sex-super':['supercarros'],'sab-dest':['acp'],
+ 'sex-super':['supercarros'],'sab-dest':['expomoto','acp'],'sex-duc':['expoauto','expomoto'],'dom-dest':['expomoto'],
  'sex-cod':['pista'],'sex-ass':['paddockrali'],'sex-k1':['pista'],'sex-k2':['pista'],'sex-drift':['pista'],
- 'sab-cod1':['pista'],'sab-desf':['pista'],'sab-k1':['pista'],'sab-rec':['pista'],'sab-leg':['pista'],'sab-pad':['paddockrali'],'sab-city':['pista'],'sab-clas':['pista'],'sab-cod2':['pista'],'sab-l2':['pista'],'sab-k2':['pista'],'sab-drift':['pista'],
+ 'sab-cod1':['pista'],'sab-desf':['pista'],'sab-k1':['pista'],'sab-rec':['pista'],'sab-leg':['pista'],'sab-pad':['paddockrali'],'sab-city':['pista'],'sab-cod2':['pista'],'sab-l2':['pista'],'sab-k2':['pista'],'sab-drift':['pista'],
  'dom-cod':['pista'],'dom-g1':['pista'],'dom-alm':['gastro'],'dom-g2':['pista'],'dom-g3':['pista'],'dom-pod':['pista'],'dom-k':['pista']
 };
-const ZEX={super:['supercarros'],acp:['acp'],marcas:['expoauto','expomoto'],auto:['automobilia'],kids:['kids'],fseg:['forcas'],patr:['vip'],comida:['gastro']};
+const ZEX={super:['supercarros'],ford:['expoauto'],ducati:['expomoto'],vespa:['expomoto'],moto:['expomoto'],hist:['acp'],acp:['acp'],marcas:['expoauto','expomoto'],auto:['automobilia'],kids:['kids'],fseg:['forcas'],patr:['vip'],comida:['gastro']};
 const PIN='<svg viewBox="0 0 16 16" width="12" height="12" aria-hidden="true"><path fill="currentColor" d="M8 1.5A4.5 4.5 0 0 0 3.5 6c0 3.2 4.5 8.5 4.5 8.5s4.5-5.300 4.500-8.500A4.500 4.500 0 0 0 8 1.500Zm0 6.200a1.700 1.700 0 1 1 0-3.400 1.700 1.700 0 0 1 0 3.400Z"/></svg>';
 const zlinks=zs=>zs&&zs.length?`<div class="zl">${zs.map(z=>`<button type="button" class="maplink" data-z="${z}">${PIN}${esc(ZN[z].n)}</button>`).join('')}</div>`:'';
 
@@ -633,8 +631,7 @@ const PISTA=[
 ];
 const UNICAS=[
  {id:'mustang',t:'Desfile Mustang',d:d2,s:'11:00',e:'11:15',blk:'sab-desf'},
- {id:'hyundai',t:'Desfile Hyundai N Thusiastics',d:d2,s:'12:30',e:'12:45',blk:'sab-desf'},
- {id:'clubes',t:'Clássicos e Clubes em pista',d:d2,s:'17:15',e:null,tbc:true,blk:'sab-clas',note:'Hora a confirmar. Coincide com o City Stage (17:05): decide antes quem fica em cada um.'}
+ {id:'hyundai',t:'Desfile Hyundai N Thusiastics',d:d2,s:'12:30',e:'12:45',blk:'sab-desf'}
 ];
 const msS=s=>Date.parse(s+'Z');
 const nowD=()=>new Date();
