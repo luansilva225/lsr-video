@@ -262,9 +262,6 @@ const B=(id,s,e,t,cat,o={})=>Object.assign({id,s,e,t,cat},o,{host:[].concat(o.ho
 const CE='Creative Eye';
 
 const DAYS=[
-{id:'qui',tab:'Qui 19',name:'Quinta 19 · véspera',blocks:[
- B('qui-mont','Dia',null,'Montagem e véspera','recinto',{host:H('teaser','Teaser curto gravado no recinto em montagem','2026-11-19T17:00','sai 18:00'),note:'Boa altura para planos gerais das exposições sem público (separador Exposições).'})
-]},
 {id:'sex',tab:'Sex 20',name:'Sexta 20 · abertura',alert:{t:'Antes das 15:00',m:'O recinto só abre ao público às 15:00. É a janela para planos gerais e detalhes sem gente (confirmar acesso com a organização).'},blocks:[
  B('sex-rali','08:00','14:00','Rali Vidreiro: reconhecimento do City Stage e partida','rali',{cov:CE,key:1,note:'Reconhecimento até 12:00, partida às 14:00.'}),
  B('sex-abert','15:00',null,'Abertura LSR 2026 · portas abertas','evento',{key:1,host:H('abert','Abertura com host e entrevista à organização','2026-11-20T16:00','sai 16:30')}),
@@ -332,7 +329,7 @@ const EXPO=[
 
 /* janelas de captação (para detetar sobreposições por pessoa) */
 const UW={
-'qui-mont':['qui 14:00-15:30'],
+
 'sex-rec':['sex 14:15-14:55'],'sex-rali':['sex 14:00-14:30'],'sex-abert':['sex 15:00-15:45'],'sex-expo':['sex 15:45-16:30'],'sex-super':['sex 16:30-17:15'],'sex-duc':['sex 17:15-18:00'],
 'sex-k1':['sex 17:30-17:45'],'sex-ass':['sex 18:15-18:45','sex 20:10-20:30'],'sex-cod':['sex 18:30-19:15'],'sex-ent':['sex 20:30-21:30'],'sex-k2':['sex 21:30-21:45'],'sex-drift':['sex 21:45-23:15'],
 'sab-rali':['sab 08:00-08:30','sab 12:45-13:15'],'sab-expo':['sab 10:30-11:15','sab 13:20-14:00'],'sab-desf':['sab 11:00-11:15','sab 12:30-12:45'],'sab-cod1':['sab 11:15-12:15'],'sab-k1':['sab 12:15-12:30'],'sab-rec':['sab 13:00-13:30'],
@@ -791,7 +788,7 @@ window.addEventListener('hashchange',()=>{if(applyHash(location.hash.slice(1)))r
   const w=safe(()=>localStorage.getItem(LSW));if(CN[w])who=w;
   if(!applyHash(location.hash.slice(1))){
     const d=nowLis().slice(0,10);
-    tab=({'2026-11-19':'qui','2026-11-20':'sex','2026-11-21':'sab','2026-11-22':'dom'})[d]||(d>'2026-11-22'?'edi':'sex');
+    tab=({'2026-11-20':'sex','2026-11-21':'sab','2026-11-22':'dom'})[d]||(d>'2026-11-22'?'edi':'sex');
   }
   const f=safe(()=>localStorage.getItem(LSV));if(['all','team','free','key','pend'].includes(f))filter=f;
   render();refresh();initStore();
