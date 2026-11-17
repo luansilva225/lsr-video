@@ -305,6 +305,9 @@ const DAYS=[
  B('dom-g3','15:45','17:30','Gold Challenge, série 3','pista',{cov:CE,key:1,note:'Toda a equipa na pista. Combinem os ângulos entre os três para não repetir planos. O reel do Creative Eye sai às 18:30.'}),
  B('dom-pod','18:00',null,'Pódio do Gold Challenge e fecho','pista',{key:1,note:'A partir das 18:00. Toda a equipa: pódio e encerramento. A galeria do Rui sai às 20:00.'})
 ]},
+{id:'seg',tab:'Seg 23',name:'Segunda 23 · aftermovie',alert:{t:'O aftermovie é nosso',m:'Sai segunda às 19:00. Usa as imagens da equipa e do Creative Eye, que entrega o material até às 12:00. Tudo o que for filmado durante o evento conta para aqui.'},blocks:[
+ B('seg-after','12:00','19:00','Aftermovie LSR 2026','evento',{br:false,key:1,host:[ed('after-ed','Editar e entregar o aftermovie (material do Creative Eye chega até às 12:00)','2026-11-23T18:30','sai 19:00')],note:'Imagens da equipa e do Creative Eye. Entrega ao Pedro Batalha.'})
+]},
 ];
 
 const EXPO=[
@@ -336,8 +339,8 @@ const UW={
 'ex.super':['sex 11:00-11:30'],'ex.ford':['sex 11:30-11:50'],'ex.ducati':['sex 11:50-12:15'],'ex.hist':['sex 12:15-12:45'],'ex.marcas':['sex 11:00-12:30'],'ex.auto':['sex 12:30-13:15'],'ex.patr':['sex 13:15-13:45'],
 'ex.kids':['sab 10:00-10:30'],'ex.vespa':['sab 10:00-10:20'],'ex.acp':['sab 10:20-10:40'],'ex.quads':['sab 10:40-11:00'],'ex.loja':['sab 15:00-15:30'],'ex.moto':['dom 10:00-10:30']};
 const CAPEND={'sab-leg.leg-ed':'sab 15:45'};
-const DM={qui:'2026-11-19',sex:'2026-11-20',sab:'2026-11-21',dom:'2026-11-22'};
-const DLB={qui:'Qui 19',sex:'Sex 20',sab:'Sáb 21',dom:'Dom 22'};
+const DM={qui:'2026-11-19',sex:'2026-11-20',sab:'2026-11-21',dom:'2026-11-22',seg:'2026-11-23'};
+const DLB={qui:'Qui 19',sex:'Sex 20',sab:'Sáb 21',dom:'Dom 22',seg:'Seg 23'};
 const SHOTS=[['ger','Plano geral'],['det','Detalhes'],['amb','Ambiente com visitantes']];
 
 const DUVIDAS=[
@@ -785,7 +788,7 @@ window.addEventListener('hashchange',()=>{if(applyHash(location.hash.slice(1)))r
   const w=safe(()=>localStorage.getItem(LSW));if(CN[w])who=w;
   if(!applyHash(location.hash.slice(1))){
     const d=nowLis().slice(0,10);
-    tab=({'2026-11-20':'sex','2026-11-21':'sab','2026-11-22':'dom'})[d]||(d>'2026-11-22'?'edi':'sex');
+    tab=({'2026-11-20':'sex','2026-11-21':'sab','2026-11-22':'dom','2026-11-23':'seg'})[d]||(d>'2026-11-22'?'edi':'sex');
   }
   const f=safe(()=>localStorage.getItem(LSV));if(['all','team','free','key','pend'].includes(f))filter=f;
   render();refresh();initStore();
