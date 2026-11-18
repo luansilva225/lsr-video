@@ -202,6 +202,7 @@ h3{margin:0;font-size:16px;font-weight:600;line-height:1.3;text-wrap:balance}
 .scdb{grid-column:1/-1;height:4px;border-radius:2px;background:rgba(255,255,255,.15);overflow:hidden;margin-top:6px}
 .scdb i{display:block;height:100%;width:0;background:#ff4d58;transition:width 1s linear}
 .scd.last .scdt{color:#ff4d58}
+.banner.turno{background:var(--blue-soft);border-color:var(--blue)}
 </style>
 </head>
 <body>
@@ -271,11 +272,18 @@ const DAYS=[
  B('sex-cod','15:30','19:15','LSR Co-Drive Experience','pista',{cov:CE,note:'Série 15:30 e 17:45 · competição 16:15 e 18:30.'}),
  B('sex-ass','17:15','20:55','Paddock Rali Vidreiro: reagrupamento e assistências','rali',{key:1,note:'Reagrupamento 17:15 · assistências 18:15 e 20:10. Sem peça da equipa: o Pedro cobre em stories.'}),
  B('sex-k1','17:30','17:45','Exibição Kartcross','pista',{cov:CE,note:'2.ª exibição às 21:30.'}),
- B('sex-ent','20:30','21:30','Entrevistas com pilotos do Rali Vidreiro','rali',{key:1,host:H('ent','Entrevistas com os pilotos do Rali Vidreiro','2026-11-20T23:00','sai sáb 11:00')}),
+ B('sex-ent','20:30','21:30','Entrevistas com pilotos do Rali Vidreiro (Espaço LSR)','rali',{key:1,host:H('ent','Entrevistas com os pilotos do Rali Vidreiro','2026-11-20T23:00','sai sáb 11:00')}),
  B('sex-k2','21:30','21:45','Exibição Kartcross (2.ª)','pista',{cov:CE}),
  B('sex-drift','21:45','23:15','Drift Show','pista',{cov:CE,key:1,note:'O reel do Drift Show do Creative Eye sai às 23:55.'})
 ]},
 {id:'sab',tab:'Sáb 21',name:'Sábado 21 · dia completo',alert:{t:'Noite crítica, 21:00 a 23:45',m:'Pódio do Rali às 21:00, Co-Drive, Legends, Kartcross e Drift quase em simultâneo, e a peça do Rali Vidreiro a fechar até às 23:59. Decide antes quem fica em cada um.',red:1},blocks:[
+ B('sab-esp1','11:30','12:00','Espaço LSR: Ponto de Situação Rali Vidreiro','evento',{note:'Espaço LSR. Sessão do programa do Espaço LSR (V5).'}),
+ B('sab-esp2','12:15','13:00','Espaço LSR: Entrevista a Andreas Mikkelsen','evento',{note:'Espaço LSR. Sessão do programa do Espaço LSR (V5).'}),
+ B('sab-esp3','14:45','15:15','Espaço LSR: Entrevista a João Beltrão','evento',{note:'Espaço LSR. Sessão do programa do Espaço LSR (V5).'}),
+ B('sab-esp4','15:30','16:15','Espaço LSR: Apresentação do livro “Vamos Falar de Clássicos”','evento',{note:'Espaço LSR. Sessão do programa do Espaço LSR (V5).'}),
+ B('sab-esp5','16:15','17:00','Espaço LSR: O Futuro dos Ralis','evento',{note:'Espaço LSR. Sessão do programa do Espaço LSR (V5).'}),
+ B('sab-esp6','17:30','18:15','Espaço LSR: Tertúlia Todo-o-Terreno','evento',{note:'Espaço LSR. Sessão do programa do Espaço LSR (V5).'}),
+ B('sab-esp7','21:30','22:00','Espaço LSR: Balanço do Campeonato de Portugal de Ralis 2026','evento',{note:'Espaço LSR. Sessão do programa do Espaço LSR (V5).'}),
  B('sab-rali','08:00',null,'Rali Vidreiro: partida da 2.ª etapa e assistências','rali',{key:1,note:'Partida 08:00 · assistências 08:03 e 12:45. Sem peça da equipa: o Pedro cobre em stories.'}),
  B('sab-cod1','10:00','12:15','LSR Co-Drive Experience','pista',{cov:CE,note:'Série 10:00 · competição 11:15.'}),
  B('sab-expo','10:00','22:00','Expo Auto e Moto · Automobilia · Loja oficial','expo',{note:'Sem peça da equipa no plano. O reel 2 da Cristiana (Expo, Automobilia e loja) sai às 17:30.'}),
@@ -293,6 +301,10 @@ const DAYS=[
  B('sab-drift','22:45','23:45','LSR Co-Drive Experience · Drift','pista',{cov:CE,key:1})
 ]},
 {id:'dom',tab:'Dom 22',name:'Domingo 22 · fecho',alert:{t:'A partir das 15:45, toda a equipa na pista',m:'Tudo o resto tem de estar filmado antes. Miguel, Rodrigo e Luan ficam juntos na série 3 do Gold Challenge, no pódio e no encerramento.',red:1},blocks:[
+ B('dom-esp1','11:00','11:45','Espaço LSR: A luta pelo Campeonato de Portugal de Ralis','evento',{note:'Espaço LSR. Sessão do programa do Espaço LSR (V5).'}),
+ B('dom-esp2','12:15','13:00','Espaço LSR: A nova geração dos Ralis em Portugal','evento',{note:'Espaço LSR. Sessão do programa do Espaço LSR (V5).'}),
+ B('dom-esp3','14:00','15:00','Espaço LSR: Sessão de autógrafos dos pilotos do Gold Challenge','evento',{note:'Espaço LSR. Sessão do programa do Espaço LSR (V5).'}),
+ B('dom-esp4','15:15','15:45','Espaço LSR: Entrevistas com pilotos do Gold Challenge','evento',{note:'Espaço LSR. Sessão do programa do Espaço LSR (V5).'}),
  B('dom-pas','10:00',null,'Passeio de bicicletas antigas','evento',{note:'Sem peça da equipa: o reel 3 da Cristiana (sai 13:30) é sobre o passeio.'}),
  B('dom-rec','Dia',null,'Pelo recinto: Leiria Kids, Força de Segurança, VIP, Patrocinadores','recinto',{note:'Sem peça da equipa no plano.'}),
  B('dom-cod','10:00','11:00','LSR Co-Drive Experience','pista',{cov:CE,note:'Série 10:00 · competição 10:30.'}),
@@ -309,6 +321,8 @@ const DAYS=[
  B('seg-after','12:00','19:00','Aftermovie LSR 2026','evento',{br:false,key:1,host:[ed('after-ed','Editar e entregar o aftermovie (material do Creative Eye chega até às 12:00)','2026-11-23T18:30','sai 19:00')],note:'Imagens da equipa e do Creative Eye. Entrega ao Pedro Batalha.'})
 ]},
 ];
+const TDIA={"sex": "Até às 14:00, os dois nas exposições sem público. Depois, Rodrigo na pista e no paddock do Rali; Miguel com o Joel no recinto (Forças de Segurança, Abertura, stands) e às 20:30 nas entrevistas do Espaço LSR. À noite, os dois no Drift.", "sab": "Manhã: Miguel na pista (Rali, Co-Drive, desfiles); Rodrigo no recinto (ACP, Vespa, Quads, Kids, Espaço LSR). Tarde e noite: Rodrigo na pista; Miguel com o Joel (ACP, paddock, City Stage, pódio às 21:00). Luan no Espaço LSR à tarde.", "dom": "Manhã: Rodrigo na pista (Co-Drive, série 1); Miguel no recinto e no Espaço LSR. 13:00 a 15:45: Miguel na pista (série 2, Kartcross); Rodrigo no recinto, autógrafos e entrevistas do Gold Challenge. A partir das 15:45, todos na pista."};
+{const tk=t=>t==='Dia'?0:t==='Tarde'?940:/^\d\d:\d\d$/.test(t)?(+t.slice(0,2))*60+ +t.slice(3):0;DAYS.forEach(d=>d.blocks.sort((a,b)=>tk(a.s)-tk(b.s)))}
 
 const EXPO=[
  {id:'super',n:'Supercarros',d:'Sex, Dom',w:'Sem público: sexta antes das 15:00. Com gente: sexta ao fim da tarde.'},
@@ -329,16 +343,9 @@ const EXPO=[
 ];
 
 /* janelas de captação (para detetar sobreposições por pessoa) */
-const UW={
-
-'sex-rec':['sex 14:15-14:55'],'sex-rali':['sex 14:00-14:30'],'sex-abert':['sex 15:00-15:45'],'sex-expo':['sex 15:45-16:30'],'sex-super':['sex 16:30-17:15'],'sex-duc':['sex 17:15-18:00'],
-'sex-k1':['sex 17:30-17:45'],'sex-ass':['sex 18:15-18:45','sex 20:10-20:30'],'sex-cod':['sex 18:30-19:15'],'sex-ent':['sex 20:30-21:30'],'sex-k2':['sex 21:30-21:45'],'sex-drift':['sex 21:45-23:15'],
-'sab-rali':['sab 08:00-08:30','sab 12:45-13:15'],'sab-expo':['sab 10:30-11:15','sab 13:20-14:00'],'sab-desf':['sab 11:00-11:15','sab 12:30-12:45'],'sab-cod1':['sab 11:15-12:15'],'sab-k1':['sab 12:15-12:30'],'sab-rec':['sab 13:00-13:30'],
-'sab-dest':['sab 14:15-15:00'],'sab-leg':['sab 14:15-15:45'],'sab-pad':['sab 15:45-16:45'],'sab-city':['sab 17:00-17:30'],'sab-cod2':['sab 19:00-19:45','sab 21:00-21:30'],'sab-pod':['sab 21:00-21:45'],'sab-l2':['sab 21:30-22:00'],'sab-k2':['sab 22:30-22:45'],'sab-drift':['sab 22:45-23:45'],
-'dom-pas':['dom 10:00-10:30'],'dom-cod':['dom 10:30-11:00'],'dom-dest':['dom 11:00-11:45'],'dom-g1':['dom 12:00-12:45'],'dom-expo':['dom 12:15-13:00'],'dom-alm':['dom 13:00-13:45'],'dom-rec':['dom 14:00-14:45'],'dom-g2':['dom 15:00-15:30'],'dom-k':['dom 15:30-15:45'],'dom-g3':['dom 15:45-17:30'],'dom-pod':['dom 18:00-19:00'],
-'ex.super':['sex 11:00-11:30'],'ex.ford':['sex 11:30-11:50'],'ex.ducati':['sex 11:50-12:15'],'ex.hist':['sex 12:15-12:45'],'ex.marcas':['sex 11:00-12:30'],'ex.auto':['sex 12:30-13:15'],'ex.patr':['sex 13:15-13:45'],
-'ex.kids':['sab 10:00-10:30'],'ex.vespa':['sab 10:00-10:20'],'ex.acp':['sab 10:20-10:40'],'ex.quads':['sab 10:40-11:00'],'ex.loja':['sab 15:00-15:30'],'ex.moto':['dom 10:00-10:30']};
+const UW={"sex-rec": ["sex 14:15-14:55"], "sex-rali": ["sex 14:00-14:30"], "sex-abert": ["sex 15:00-15:45"], "sex-expo": ["sex 15:45-16:30"], "sex-super": ["sex 16:30-17:15"], "sex-duc": ["sex 17:15-18:00"], "sex-cod": ["sex 15:30-17:00", "sex 18:45-19:15"], "sex-k1": ["sex 17:30-17:45"], "sex-ass": ["sex 18:15-18:45", "sex 20:10-20:30"], "sex-ent": ["sex 20:30-21:30"], "sex-k2": ["sex 21:30-21:45"], "sex-drift": ["sex 21:45-23:15"], "sab-rali": ["sab 08:00-08:30", "sab 12:45-13:00"], "sab-cod1": ["sab 10:00-11:00", "sab 11:15-12:15"], "sab-desf": ["sab 11:00-11:15", "sab 12:30-12:45"], "sab-k1": ["sab 12:15-12:30"], "sab-rec": ["sab 13:00-14:00"], "sab-esp1": ["sab 11:30-12:00"], "sab-esp2": ["sab 12:15-13:00"], "sab-expo": ["sab 13:20-14:00"], "sab-dest": ["sab 14:15-15:00"], "sab-leg": ["sab 14:15-15:45"], "sab-esp3": ["sab 14:45-15:15"], "sab-pad": ["sab 15:45-16:45"], "sab-esp4": ["sab 15:30-16:15"], "sab-esp5": ["sab 16:15-17:00"], "sab-city": ["sab 17:00-17:30"], "sab-esp6": ["sab 17:30-18:15"], "sab-cod2": ["sab 19:00-19:45", "sab 21:00-21:30"], "sab-pod": ["sab 21:00-21:45"], "sab-l2": ["sab 21:30-22:00"], "sab-esp7": ["sab 21:30-22:00"], "sab-k2": ["sab 22:30-22:45"], "sab-drift": ["sab 22:45-23:45"], "dom-pas": ["dom 10:00-10:30"], "dom-cod": ["dom 10:00-11:00"], "dom-esp1": ["dom 11:00-11:45"], "dom-g1": ["dom 11:00-13:00"], "dom-dest": ["dom 11:45-12:15"], "dom-esp2": ["dom 12:15-13:00"], "dom-alm": ["dom 13:00-13:30"], "dom-expo": ["dom 13:30-14:00"], "dom-g2": ["dom 13:00-15:30"], "dom-esp3": ["dom 14:00-15:00"], "dom-rec": ["dom 15:00-15:15"], "dom-esp4": ["dom 15:15-15:45"], "dom-k": ["dom 15:30-15:45"], "dom-g3": ["dom 15:45-17:30"], "dom-pod": ["dom 18:00-19:00"], "ex.super": ["sex 11:00-11:30"], "ex.ford": ["sex 11:30-11:50"], "ex.ducati": ["sex 11:50-12:15"], "ex.hist": ["sex 12:15-12:45"], "ex.marcas": ["sex 11:00-12:30"], "ex.auto": ["sex 12:30-13:15"], "ex.patr": ["sex 13:15-13:45"], "ex.vespa": ["sab 10:00-10:20"], "ex.acp": ["sab 10:20-10:40"], "ex.quads": ["sab 10:40-11:00"], "ex.kids": ["sab 11:00-11:30"], "ex.loja": ["sab 13:00-13:20"], "ex.moto": ["dom 10:30-11:00"]};
 const CAPEND={'sab-leg.leg-ed':'sab 15:45'};
+const TURNOS={"sex-rec": "miguel", "ex.fseg": "miguel", "sex-abert": "miguel", "sex-expo": "miguel", "sex-super": "miguel", "sex-duc": "miguel", "sex-ent": "miguel", "ex.super": "miguel", "ex.ford": "miguel", "ex.ducati": "miguel", "ex.hist": "miguel", "sex-rali": "terceiro", "sex-cod": "terceiro", "sex-k1": "terceiro", "sex-ass": "terceiro", "sex-k2": "terceiro", "sex-drift": "terceiro", "ex.marcas": "terceiro", "ex.auto": "terceiro", "ex.patr": "terceiro", "sab-rali": "miguel", "sab-cod1": "miguel", "sab-desf": "miguel", "sab-k1": "miguel", "sab-rec": "miguel", "sab-dest": "miguel", "sab-pad": "miguel", "sab-city": "miguel", "sab-pod": "miguel", "sab-drift": "miguel", "sab-esp1": "terceiro", "sab-esp2": "terceiro", "sab-expo": "terceiro", "ex.vespa": "terceiro", "ex.acp": "terceiro", "ex.quads": "terceiro", "ex.kids": "terceiro", "ex.loja": "terceiro", "sab-leg": "terceiro", "sab-cod2": "terceiro", "sab-l2": "terceiro", "sab-k2": "terceiro", "sab-esp3": "luan", "sab-esp4": "luan", "sab-esp5": "luan", "sab-esp6": "luan", "sab-esp7": "luan", "dom-pas": "miguel", "ex.moto": "miguel", "dom-esp1": "miguel", "dom-dest": "miguel", "dom-esp2": "miguel", "dom-g2": "miguel", "dom-k": "miguel", "dom-cod": "terceiro", "dom-g1": "terceiro", "dom-alm": "terceiro", "ex.comida": "terceiro", "dom-expo": "terceiro", "dom-esp3": "terceiro", "dom-rec": "terceiro", "dom-esp4": "terceiro", "seg-after": "luan"};
 const DM={qui:'2026-11-19',sex:'2026-11-20',sab:'2026-11-21',dom:'2026-11-22',seg:'2026-11-23'};
 const DLB={qui:'Qui 19',sex:'Sex 20',sab:'Sáb 21',dom:'Dom 22',seg:'Seg 23'};
 const SHOTS=[['ger','Plano geral'],['det','Detalhes'],['amb','Ambiente com visitantes']];
@@ -450,7 +457,8 @@ const UNITS=()=>[...ALLB.map(b=>b.id).filter(u=>!ALLH.includes(u)),...EXPO.map(x
 function guiaHTML(){
   const cnt=id=>id==='joel'?JOEL.length:UNITS().filter(u=>id==='none'?!assign.get(u):assign.get(u)===id).length;
   const people=CREW.concat([['none','Por atribuir']]);
-  let html=`<div class="filters">${people.map(([id,n])=>`<button class="chip" data-g="${id}" aria-pressed="${id===who}">${n} · ${cnt(id)}</button>`).join('')}</div>`;
+  const dif=Object.entries(TURNOS).filter(([u,w])=>assign.get(u)!==w);
+  let html=(dif.length?`<p class="banner red"><b>Distribuição por turnos por aplicar.</b> ${dif.length} atividades mudam de responsável. <button type="button" class="chip" id="applyT">Aplicar turnos</button></p>`:'')+`<div class="filters">${people.map(([id,n])=>`<button class="chip" data-g="${id}" aria-pressed="${id===who}">${n} · ${cnt(id)}</button>`).join('')}</div>`;
   const exs=EXPO.filter(x=>matchP('ex.'+x.id));
   const its=[...ALLB.filter(b=>matchP(b.id)).flatMap(itemsOf).filter(i=>(i.kind!=='ed'||who==='luan')&&(who!=='joel'||i.kind==='cap')),...exs.flatMap(x=>SHOTS.map(s=>({key:'ex.'+x.id+'.'+s[0]})))];
   const dn=its.filter(i=>checks.has(i.key)).length, nu=cnt(who);
@@ -460,7 +468,7 @@ function guiaHTML(){
   let any=false;
   DAYS.forEach(d=>{
     const bl=d.blocks.filter(b=>matchP(b.id));
-    if(bl.length){any=true;html+=`<h2 class="dh">${esc(d.name)}</h2>`+bl.map(b=>blockHTML(b,{noAs:true})).join('')}
+    if(bl.length){any=true;html+=`<h2 class="dh">${esc(d.name)}</h2>`+(TDIA[d.id]&&who!=='joel'?`<p class="banner turno"><b>Turnos.</b> ${esc(TDIA[d.id])}</p>`:'')+bl.map(b=>blockHTML(b,{noAs:true})).join('')}
   });
   if(exs.length){any=true;html+=`<h2 class="dh">Exposições</h2>${exs.map(x=>exHTML(x,null,true)).join('')}`}
   if(who==='luan')html+=`<h2 class="dh">Edição</h2><p class="note">Os prazos estão no separador Edição.</p>`;
@@ -483,7 +491,7 @@ function render(){
     m.innerHTML=guiaHTML();
   }else{
     const d=DAYS.find(x=>x.id===tab), bl=d.blocks.filter(keep);
-    m.innerHTML=(tab==='sab'&&filter==='all'?'<section class="once" id="once-sab">'+onceHTML()+'</section>':'')+(d.alert&&filter==='all'?`<p class="banner${d.alert.red?' red':''}"><b>${esc(d.alert.t)}.</b> ${esc(d.alert.m)}</p>`:'')+(bl.length?bl.map(b=>blockHTML(b)).join(''):'<p class="empty">Nada a mostrar com este filtro.</p>');
+    m.innerHTML=(tab==='sab'&&filter==='all'?'<section class="once" id="once-sab">'+onceHTML()+'</section>':'')+(d.alert&&filter==='all'?`<p class="banner${d.alert.red?' red':''}"><b>${esc(d.alert.t)}.</b> ${esc(d.alert.m)}</p>`:'')+(TDIA[d.id]&&filter==='all'?`<p class="banner turno"><b>Turnos.</b> ${esc(TDIA[d.id])}</p>`:'')+(bl.length?bl.map(b=>blockHTML(b)).join(''):'<p class="empty">Nada a mostrar com este filtro.</p>');
   }
   renderTabs();
 }
@@ -547,7 +555,7 @@ const ZN=Object.fromEntries(ZONES.map(z=>[z.id,z]));
 const ZMAP={
  'sex-rec':['forcas','kids','vip','gastro'],'dom-rec':['forcas','kids','vip','gastro'],
  'sex-expo':['expoauto','expomoto','automobilia'],'sab-expo':['expoauto','expomoto','automobilia'],'dom-expo':['expoauto','expomoto','supercarros'],
- 'sex-super':['supercarros'],'sab-dest':['expomoto','acp'],'sex-duc':['expoauto','expomoto'],'dom-dest':['expomoto'],
+ 'sex-super':['supercarros'],'sex-ent':['espaco'],'sab-esp1':['espaco'],'sab-esp2':['espaco'],'sab-esp3':['espaco'],'sab-esp4':['espaco'],'sab-esp5':['espaco'],'sab-esp6':['espaco'],'sab-esp7':['espaco'],'dom-esp1':['espaco'],'dom-esp2':['espaco'],'dom-esp3':['espaco'],'dom-esp4':['espaco'],'sab-dest':['expomoto','acp'],'sex-duc':['expoauto','expomoto'],'dom-dest':['expomoto'],
  'sex-cod':['pista'],'sex-ass':['paddockrali'],'sex-k1':['pista'],'sex-k2':['pista'],'sex-drift':['pista'],
  'sab-cod1':['pista'],'sab-desf':['pista'],'sab-k1':['pista'],'sab-rec':['pista'],'sab-leg':['pista'],'sab-pad':['paddockrali'],'sab-city':['pista'],'sab-cod2':['pista'],'sab-l2':['pista'],'sab-k2':['pista'],'sab-drift':['pista'],
  'dom-cod':['pista'],'dom-g1':['pista'],'dom-alm':['gastro'],'dom-g2':['pista'],'dom-g3':['pista'],'dom-pod':['pista'],'dom-k':['pista']
@@ -734,6 +742,14 @@ async function toggle(k,on){
     catch(e){on?checks.delete(k):checks.add(k); refresh(); toast('Não foi possível guardar. Tenta outra vez.')}
   }else saveLocal();
 }
+async function applyTurnos(){
+  const dif=Object.entries(TURNOS).filter(([u,w])=>assign.get(u)!==w); if(!dif.length)return;
+  const prev=new Map(assign); dif.forEach(([u,w])=>assign.set(u,w)); refresh(); render();
+  if(db){
+    try{for(const [u,w] of dif)await db.collection('assign').doc(u).set({who:w,at:Date.now()}); toast('Turnos aplicados: '+dif.length+' atividades atualizadas.')}
+    catch(e){toast('Não foi possível aplicar todos os turnos. Tenta outra vez.')}
+  }else{saveLocal();toast('Turnos aplicados neste aparelho.')}
+}
 async function setAssign(k,v){
   const prev=assign.get(k); v?assign.set(k,v):assign.delete(k); refresh();
   if(v&&['miguel','terceiro','luan'].includes(v)){const c=conflictsOf(v).filter(x=>x[0].u===k||x[1].u===k)[0];if(c)toast('Sobreposição de horário: '+cfTxt(c))}
@@ -773,7 +789,7 @@ document.addEventListener('change',e=>{
 });
 $('#tabs').addEventListener('click',e=>{const b=e.target.closest('[data-t]');if(b)go(b.dataset.t)});
 $('#filters').addEventListener('click',e=>{const b=e.target.closest('[data-f]');if(b){filter=b.dataset.f;safe(()=>localStorage.setItem(LSV,filter));render()}});
-$('#main').addEventListener('click',e=>{const q=e.target.closest('[data-eh]');if(q){edHide=q.dataset.eh==='1';render();return}const b=e.target.closest('[data-g]');if(b){who=b.dataset.g;safe(()=>localStorage.setItem(LSW,who));go('guia')}});
+$('#main').addEventListener('click',e=>{if(e.target.closest('#applyT')){applyTurnos();return}const q=e.target.closest('[data-eh]');if(q){edHide=q.dataset.eh==='1';render();return}const b=e.target.closest('[data-g]');if(b){who=b.dataset.g;safe(()=>localStorage.setItem(LSW,who));go('guia')}});
 function go(id){tab=id;const h=id==='guia'?'guia-'+(who==='terceiro'?'rodrigo':who):id;if(location.hash!=='#'+h)location.hash=h;render();const a=$('#tabsAnchor').getBoundingClientRect().top+window.scrollY;if(window.scrollY>a)window.scrollTo({top:a})}
 function applyHash(h){
   if(h==='guia'||h.startsWith('guia-')){const w=h.slice(5)==='rodrigo'?'terceiro':h.slice(5);tab='guia';if(CN[w]||w==='none')who=w;return true}
